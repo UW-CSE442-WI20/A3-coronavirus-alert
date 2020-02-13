@@ -1,53 +1,13 @@
+Group topic: coronavirus-alert
+Group members: Jialu Yuan, Yuqing Xue, Shawn Jiang, Eric Fan
 
+1. 
+The main question we want to address with visualization is the up-to-date situation of coronavirus outbreak in China. To be more specific, we want to deliver an interactive visualization for the audience to explore different situations across provinces in China, including their respective confirmed and healed cases and deaths.
 
-# A3 Starter template
+First, we decided to use a map as our main way to visualize the dataset since it seems to be the most intuitive way for the audience to observe provinces' situations based on geology. To show differences among provinces, we used the darkness of color to represent the severity: the darker the color is, the more severe the current situation in a province becomes. We chose the number of confirmed cases to determine the severity because after observing the dataset, we found that death cases don’t vary much across most provinces due to the low death rate; however, confirmed cases varies greatly between provinces and thus can show more obvious effect on the map. Note that when displaying color of each province according to confirmed cases, we used scalePow() with exponent = 0.5 in D3 instead of using scaleLinear(). This is because the province “Hubei” has too many confirmed cases compared to other provinces, and using scaleLinear() will lead them to show really light red that’s hard to distinguish although discrepancy exists. Second, we created three line graphs that visualize total number of confirmed, death, and recovered cases to show the trend through a time series. Aside from the above encodings, we also have a legend that denotes the relationship between the number of confirmed cases and gradient color change.
 
-The starter code for creating interactive visualization prototypes.
+For the interactive part, as you hover your mouse over the map, the province area will automatically be delineated. At the same time, “details-on-demand” will be provided including detailed attributes of the province you locate on. (We realize it with a tooltip) As you switch to another province, the new corresponding details will appear. Moreover, there is a scrollable table that lists provinces in descending order of the numbers of confirmed cases to give the audience a data summary of all provinces. Also, for the time series line graph, users can mouse over the line and the case number for each date will be displayed with a focus circle. Corresponding title will be shown as the user chooses “confirmed”, “deaths” or “recovered” from the drop-down box, to let users explore a certain aspect of datthrough time series.
 
-## Getting Started
+2. We use D3.js combined with HTML and CSS to deliver our final visualization. For the development process, Jialu is responsible for preparing suitable dataset to use and creating the map-related interactive visualization; Yuqing is responsible for creating the interactive time series for total confirmed cases, deaths cases and recovered cases and the writeup. Shawn and Eric are responsible for creating other interactive part such as the scrollable table, and improving the effectiveness of visual encodings and webpage layout. Some preparation work seems to be most time-consuming. For example, figuring out front-end language basics and coordination principle between D3.js, HTML and CSS. Also, we spent much time drawing map with given locations of provinces and extracting information from dataset to draw interactive line graphs.
 
-This repo is set up to use the [Parcel](https://parceljs.org/) bundler. If you don't
-like the way we've set things up, feel free to change it however you like!
-
-The only restriction is that __your final HTML/CSS/JS output must be stored in the "docs" folder__ so that
-GitHub knows how to serve it as a static site.
-
-### Install
-
-#### Required software
-
-You must have Node.js installed. I prefer to install it using [nvm](https://github.com/nvm-sh/nvm)
-because it doesn't require sudo and makes upgrades easier, but you can also just get it directly from
-https://nodejs.org/en/.
-
-#### Install dependecies
-
-Once you've got `node`, run the command `npm install` in this project folder
-and it will install all of the project-specific dependencies (if you're curious open up `package.json` to see where these are listed).
-
-npm is the _node package manager_.
-
-### Running the local dev server
-
-To run the project locally, run `npm start` and it will be available at http://localhost:1234/.
-
-### Building the final output
-
-Run `npm run build` and all of your assets will be compiled and placed into the `docs/` folder. Note
-that this command will overwrite the existing docs folder.
-
-Once pushed to GitHub, the output should be available at UW-CSE442-WI20.github.io/<your-repo-name>/
-
-
-## Other notes
-
-### Using 3rd party libraries
-
-You are more than welcome to use open source packages such as D3.js, just make sure to cite these.
-
-To add a new one run `npm install --save <library-name>`, e.g. `npm install --save d3`. This will
-add the library locally so it is available for use in your JS files. It will also add `d3` to the
-list of dependencies in `package.json`.
-
-_Note that if you install a library your teammates will need to install it too. Once the dep is added
-to `package.json` simply running `npm install` in this directory will download the new dependency._
+Estimated in-person time: Jialu 7hrs; Yuqing 9hrs; Shawn 6hrs; Eric 6hrs.
