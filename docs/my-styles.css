@@ -1,0 +1,135 @@
+.my-header-group {
+  text-align: center;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 400px;
+  left: 50px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 180px;
+  right: 40px;
+}
+
+.hidden {
+    display: none;
+}
+.tooltip {
+  color: #222;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 2px 0px #a6a6a6;
+  padding: .2em;
+  text-shadow: #f5f5f5 0 1px 0;
+  opacity: 0.9;
+  position: absolute;
+}
+
+body {
+  background-color: #FEFCF7;
+}
+
+h1 {
+  position: relative;
+  top: 30px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 55;
+}
+
+.table-wrapper {
+  width: 220px;
+  position: absolute;
+  top: 600px;
+  height: 300px;
+  display: block;
+  overflow: scroll;
+  border: 1px solid black;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 20;
+  left: 40px;
+  text-align: right;
+}
+
+.table {
+  border-spacing: 5px;
+  text-align: center;
+}
+
+/* Line chart part*/
+#box1 {
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+  margin-top: 800px;
+  text-align: center;
+}
+
+#boxs {
+  position: relative;
+  left: 20px;
+}
+
+#box1 svg {
+  position: relative;
+  top: 40px;
+  right: 40px;
+  width: 1200px;
+  height: 80%;
+}
+
+.axis1 {
+  font: 10px sans-serif;
+}
+
+.axis1 path, 
+.axis1 line1 {
+      fill: none;
+      stroke: #D4D8DA;
+      stroke-width: 2px;
+      shape-rendering: crispEdges;
+}
+
+.line1 {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #F1F3F3;
+  stroke: red;
+  stroke-width: 5px;
+}
+
+.hover-line1 {
+  stroke: red;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
+
+.axis1-title {
+  font-size: 20px;
+}
+
+.dot {
+  fill: red;             
+  stroke: #fff;
+}
+
+#s1 {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
